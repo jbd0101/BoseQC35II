@@ -7,21 +7,22 @@
 
     sudo nano /etc/bluetooth/audio.conf
 remplacer le contenu avec :
-> [General]
+``` [General]
 Disable=Socket
 Disable=Headset
 Enable=Media,Source,Sink,Gateway
 AutoConnect=true
 load-module module-switch-on-connect
+```
 
     sudo nano /etc/bluetooth/main.conf
-
->  remplacer 
+  remplacer
+  ```
     ControllerMode = dual
-    par 
-	ControllerMode = bedr
-	    !!rien d'autre n est a modifier!!
-
+    par
+  ControllerMode = bedr
+      !!rien d'autre n est a modifier!!
+```
 redémarrer le service bluetooth :
 
 >  sudo service bluetooth restart
